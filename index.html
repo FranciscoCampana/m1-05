@@ -3,38 +3,26 @@
 	<head>
 		<meta charset="utf-8">
 		<title>EANT - Fullstack Essenstials</title>
+		<link rel="stylesheet" href="./css/style.css">
+
 		<style>
-			/* comentario: Anatomia de una regla CSS;*/
-			/* selector { propiedad : valor; }*/
-
-			h1{
-				color: blue;
-    			font-family: arial;
-    			font-size: 28px;
-    			text-decoration: underline
-			}
-			a {
-				color: white;
-				text-decoration: none;
-				background-color: grey;
-			}
-			a:hover {
-				background-color: black;
-
-			}
+			a{background-color: lightgreen}
 		</style> 
 	</head>
 	
 	<body>
 		<h1 style="font-size: 12px">Aprendiendo Git</h1>
 		<p>Git es un <strong onclick="saludar()">software </strong>de control de versiones diseñado por <a href="https://es.wikipedia.org/wiki/Linus_Torvalds" target="_blank" title="ver mas en la Wikipedia">Linus Torvalds</a></p>
+			
+			<a href="https://git-scm.com/" target="_blank">
+			<img src="./img/Git-logo.png" alt = "git for Humans" width="100">
+		</a>
+
 
 		<!-- AREA DE SCRIPT -->
+		<script src="./js/main.js"></script>
 		<script>
-			function saludar(){
-				alert("Hola desde JavaScript!")
-			}
-
+			window.onload = saludar
 		</script>
 	</body>
 </html>
