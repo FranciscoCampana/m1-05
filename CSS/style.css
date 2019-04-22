@@ -1,17 +1,62 @@
 /* comentario: Anatomia de una regla CSS;*/
-/* selector { propiedad : valor; }*/
+/* selector { propiedad : valor; }
+/* selector {
 
-h1{
-color: blue;
-font-family: arial;
-font-size: 28px;
-text-decoration: underline
+	propiedad : valor;
+	propiedad : valor;
+	propiedad : valor;
+}
+*/
+
+* {
+	outline: dotted 1px white;
+}
+
+body{
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #333333;
+	margin: 0;
 }
 a {
-color: white;
-text-decoration: none;
-background-color: grey;
+	color: #333;
+	text-decoration: none;
 }
-a:hover {
-background-color: black;
+header{
+	background-color: #333;
+	color: #fff;
+	padding: 15px;
+	overflow: hidden;
+}
+header a {
+	color: #fff;
+	display: block;
+	padding: 5px;
+	text-align: center;
+}
+header a:hover {
+	color: #AAA;
+}
+header h1 {
+	float: left;
+	font-size: 28px;
+	font-weight: 700;
+	background-image: url("../img/logo.png");
+	background-repeat: no-repeat;
+	background-position: left; center;
+	background-size: contain;
+	padding-left: 72px;
+}
+
+header nav {
+	float: right;
+}
+
+header ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+header ul li {
+	display: inline-block;	
 }
