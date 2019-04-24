@@ -9,11 +9,11 @@
 */
 
 * {
-	outline: dotted 1px white;
+	outline: dotted 1px red; /*linea divisora de cada caja. puede ser punteda, con guiones, o linea*/
 }
 
 body{
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif; /*tipo de letra*/
 	font-size: 14px;
 	color: #333333;
 	margin: 0;
@@ -74,19 +74,57 @@ header ul li {
 
 #noticias-destacadas h2 {
 	background-color: #333;
-	color: #fff;
-	font-size: 32px;
-	font-weight: 700;
-	padding: 15px;
+	color: #fff; /*color letra*/
+	font-size: 32px; /*tamaño fuente*/
+	font-weight: 700; /*ancho negrita*/
+	padding: 15px; /*espaciado interno de la caja, empuja para adentro. La otra opcion es margin pero separa la caja del borde*/
+}
+
+.noticia{
+	display: flex; /* indican que los items de ese contenedor seran posicionados con las config de abajo*(se usan con las config de abajo)/ 
+	/* en vez de usar float usas flex para que */
+	flex-direction: row; /*row (fila) - column (columna)*/
+	align-items: center; /*posibles valores - flex start - center - flex-end*/
+	justify-content: space-around;/* alineación flex start - center - flex end - space-around - space-between */
+	border-bottom: solid 2px #ccc; /*linea divisoria entre nota y nota. */
+	padding:20px 0;
+	margin: 0 20px;
+}
+
+.noticia:last-child	{ /*seudo clase dado que es una regla especifica que no amerita hacer una nueva clase pero hay que definirle config especifica*/
+	border: none;
 }
 
 .noticia-img {
-	width: 35%;
+	width: 30%; /*width ancho del elemento*/
+	
+	
 }
-.noticia-txt {
-	width: 65%;
+ .noticia-txt {
+ 	width: 60%;
+ 	
+ }
+
+.noticia-txt h3, .noticia-txt p, .noticia-txt blockquote {
+	margin: 20px 0 10px 0;
+	/*tambien se puede poner margin: 10px 0; El primero es eje "Y" y el otro "X". Para bajarle peso*/
+	line-height: 1.5 /*interlineado - pueden ser valores o fracciones*/ /*la base de calculo es el alto de la letra*/
+}
+
+.noticia-txt h3{
+	font-weight: 700;
+	font-size: 28px;
+}
 
 
+.noticia-txt p a{
+	color: #000;
+	font-weight:700;
+}
+
+#tabla-posiciones table {
+	margin: auto;
+}
 
 
 
