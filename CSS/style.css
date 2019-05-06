@@ -124,7 +124,87 @@ header ul li {
 
 #tabla-posiciones table {
 	margin: auto;
+	border-collapse: collapse;
+	border:none;
+	width: 80%;
+}
+#tabla-posiciones table th{
+	background-color: red;
+	color: #fff;
+	padding: 10px;
+	font-weight: 700;
+	font-size: 20px;
+
 }
 
+#tabla-posiciones table td{
+	background-color: #ccc;
+	padding: 10px;
+}
 
+#tabla-posiciones table td:nth-of-type(odd){
+	font-weight: 700;
+	font-size: 20px;
+	text-align: center;
+	vertical-align: middle;
+}
 
+#tabla-posiciones table td:nth-of-type(even) span {
+	color: darkblue;
+	font-weight: bold;
+}
+
+#tabla-posiciones table tr {
+	border-bottom: solid 1px #CCC
+}
+#tabla-posiciones table tr: last-child,
+#tabla-posiciones table tr: first-child
+ {
+	border: none;
+}
+footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	padding: 10px;
+	margin-top: 20px;
+}
+
+/* despues de @media se espicifica el tipo de dipositivo print para impresoras por ejemlpo
+es decir estilo de como se va a imprimir en papel lo que veo en la pantalla. screen para definir pantalla */
+
+@media screen and (min-width: 320px) and (max-width: 480px) 
+{
+	header h1 {
+		font-size: 24px;
+		padding-left: 55px;	
+}
+
+header nav  {
+	display: none;
+	float: none;
+	clear: both;  /*sirve para romper los elementos flotantes de arriba y como "dejar un espacio"*/
+}
+
+header nav li {
+	display: block;
+	
+}
+
+header button {
+	margin: 0;
+	padding: 5px;
+	color: #fff;
+	border: none;
+	float: right;
+	background-color: transparent;
+	font-size: 20px;
+	line-height: 1;
+	font-weight: bold;
+}
+
+header button:focus + nav {
+	display: block;
+}
+}
