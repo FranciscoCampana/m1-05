@@ -1,11 +1,20 @@
 <h1>Introduccion JavaScript</h1>
 
+<button id="nuevo">NuevoProducto</button>
 
+<section id="listado-productos"></section>
 	
 <script>
 /* introducción */
 
 	const IVA = 1.21
+
+	document.querySelector ("#nuevo").onclick = crearProducto
+
+/////////////////////////////////////////////////////////////////////////
+
+function crearProducto() {
+	//inicio función//
 
 	let nombre = prompt("Ingrese Nombre:")
 	let stock = prompt("Ingrese stock:")
@@ -41,9 +50,13 @@
 	<li>${accion}</li>
 	</ul>`
 
+//document.write (ficha) lo imprime en todo el doc
+document.querySelector("#listado-productos").innerHTML = ficha
 
 
-	document.write (ficha)
+	//fin función//
+}
+
 </script>
 
 
