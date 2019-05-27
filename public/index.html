@@ -117,7 +117,7 @@
     </script>
     <script>
       let ajax = new XMLHttpRequest()
-      ajax.open("GET", "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.iprofesional.com%2Frss%2Feconomia")
+      ajax.open("GET", "https://api.sheety.co/70696328-8565-4e95-b963-cc9b51c2573e")
       ajax.onload = function(){
         if( ajax.status == 200 ){ //<--Respuesta Exitosa!
 
@@ -139,9 +139,9 @@
           //}
 
 
-        noticias.items.forEach(function(noticia){
+        noticias.forEach(function(noticia){
 
-          crearNoticia(noticia.title, noticia.author, noticia.description, noticia.enclosure.link)
+          crearNoticia(noticia.titulo, noticia.autor, noticia.detalle, noticia.imagen)
         })
 
 
