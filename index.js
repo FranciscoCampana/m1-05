@@ -1,5 +1,6 @@
 const http = require("http");
 const fs = require("fs");
+const form = require("querystring")
 
 http.createServer(function(request, response) {
 		
@@ -9,6 +10,22 @@ http.createServer(function(request, response) {
 			file = (file.match(/[^.]+(\.[^?#]+)?/) || [])[0];
 		
 		let ext = file.substring( file.lastIndexOf(".") ).toLowerCase();
+
+		if(request.method == "POST" && file == "/enviar"){
+
+			//aca hay que leer los datos que mando el formulario
+
+			request.on("data", function(datos){
+
+				datos = datos.toString()
+
+				datos = form.parse( datos )
+
+				response.end( JSON.stringify(datos) )
+			})
+
+			
+		}
 
 		let types = {
 			".html"	: "text/html",
