@@ -117,7 +117,7 @@
     </script>
     <script>
       let ajax = new XMLHttpRequest()
-      ajax.open("GET", "https://api.sheety.co/70696328-8565-4e95-b963-cc9b51c2573e")
+      ajax.open("GET", "db/noticias.json")
       ajax.onload = function(){
         if( ajax.status == 200 ){ //<--Respuesta Exitosa!
 
@@ -139,7 +139,7 @@
           //}
 
 
-        noticias.forEach(function(noticia){
+        noticias.collections[0].data.forEach(function(noticia){
 
           crearNoticia(noticia.titulo, noticia.autor, noticia.detalle, noticia.imagen)
         })
