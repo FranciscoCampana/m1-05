@@ -4,6 +4,7 @@
   "description": "web Web de Noticias y Resultados Deportivos",
   "main": "index.js",
   "scripts": {
+    "star" : "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
